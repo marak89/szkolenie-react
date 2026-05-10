@@ -8,6 +8,7 @@ DC = docker compose -f $(ENV)
 
 .PHONY: setup
 setup: pull build restart
+	@echo "✅ Projekt został pomyślnie zaktualizowany i uruchomiony!"
 
 .PHONY: up
 up:
@@ -21,11 +22,15 @@ down:
 
 .PHONY: build
 build:
+	@echo "🔨 Budowanie projektu..."
 	$(DC) build 
 
 .PHONY: restart
 restart: down up
+	@echo "🔄 Restart kontenerów docker zakończony!"
+	
 
 .PHONY: pull
 pull:
+	@echo "📥 Pobieranie aktualizacji..."
 	git pull
