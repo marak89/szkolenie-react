@@ -16,6 +16,7 @@ function App() {
           <p>
             Nowa wersja super aplikacji
           </p>
+          <p>Za tydzień dalszy ciąg programu...</p>
         </div>
       </section>
     </>
